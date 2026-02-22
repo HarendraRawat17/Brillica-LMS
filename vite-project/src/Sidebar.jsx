@@ -31,7 +31,8 @@ const nav = ()=>{
         sidebarComp.map((prop) => {
           return (
             <NavLink to={prop.path}
-             onClick={prop.onclick ? () => setModalShow(true): undefined}
+            key={prop.id}
+             onClick= {prop.onclick ? () => setModalShow(true): undefined}
               className={({ isActive }) =>
                 isActive ? sideBar_tabs_active : sideBar_tabs_inactive
               }
